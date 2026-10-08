@@ -147,7 +147,7 @@ const getItems = async () => {
 };
 
 const updateItemStatusInDatabase = async (id, status) => {
-    const endpoint = "https://food-items-server.onrender.comapi/items/update-item-status";
+    const endpoint = "https://food-items-server.onrender.com/api/items/update-item-status";
 
     try {
         const res = await fetch(endpoint, {
