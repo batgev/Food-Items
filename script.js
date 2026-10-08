@@ -104,7 +104,7 @@ const displayItems = () => {
 
 const addItemToDatabase = async (item) => {
     try {
-        const res = await fetch("http://localhost:3000/api/items/add-item", {
+        const res = await fetch("https://food-items-server.onrender.com/api/items/add-item", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ item, status: "not-bought" })
@@ -127,7 +127,7 @@ const addItemToDatabase = async (item) => {
 
 const getItems = async () => {
     try {
-        const res = await fetch("http://localhost:3000/api/items/get-items", {
+        const res = await fetch("https://food-items-server.onrender.com/api/items/get-items", {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         });
@@ -147,7 +147,7 @@ const getItems = async () => {
 };
 
 const updateItemStatusInDatabase = async (id, status) => {
-    const endpoint = "http://localhost:3000/api/items/update-item-status";
+    const endpoint = "https://food-items-server.onrender.comapi/items/update-item-status";
 
     try {
         const res = await fetch(endpoint, {
